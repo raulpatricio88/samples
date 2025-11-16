@@ -1,0 +1,44 @@
+
+KICK: s("bd").struct("1 1 1 1 1 1 1 1").cpm(18.75).bank("tr909").dec(0.7).dist(1.1)//.adsr(".0.5:.1:.15:.10")RolandTR909
+_hh: s("hh").struct("0 1").cpm(150)
+_oh: s("[hh hh] oh").cpm(150).gain(0.6)
+CLAP: s("cp").struct("0 1").cpm(150/2).dec(1.5).dist(1.1).gain(0.4).lpf(1350)
+_BASSLINE: note("<[e2 e3]*8 [a1 a2]*8 [c1 c2]*8 [b1 b2]*8 >").sound("[gm_synth_bass_1, square]").lpf(800).cpm(18.75).gain(1.25)
+//VOZ: s("hello").bank("vox")
+//ambiente
+//agregar punchcard
+//agregar hihat de mas golpes, tambien saw de mas toques
+//otro lead: n(irand(8)).scale("f#3:minor:pentatonic").seg(16).sound("saw").acidenv(slider(0.4)).ribbon(8, 1)._punchcard()
+
+_LEAD_SUAVE: note("e - b - a g f# d - a d d g d b -")
+  .sound("[gm_violin, square]")
+  .cpm(18.75)
+  //.lpf(500)
+  .attack(0)
+  .decay(.4)
+  .sustain(.30)
+  .release(.10)
+  .room(3)
+  .gain(0.35) 
+
+_LEAD: note("e4 - b4 - a4 g4 f#4 d4 - a4 d4 d4 g4 d4 b4 -")
+  .sound("z_sawtooth")
+  .cpm(18.75)
+  //.lpf(2000)
+  .attack(0)
+  .decay(.4)
+  .sustain(.25)
+  .release(.2)
+  .delay(0.5)
+  .gain(1.5)
+
+ _FRASE: note("- e4 e4 - e4 - - e4 e4 - e4 e4 e4 b4 - - - d5 - - b4 - g4 b4 - gb4 - - gb4 d4 c4 b4")
+  .sound("z_sawtooth")
+  .cpm(9.366)
+  //.lpf(2000)
+  .attack(0)
+  .decay(0.4)
+  .sustain(.25)
+  .release(.1)
+  .delay(0.4)
+  .gain(1.5)
